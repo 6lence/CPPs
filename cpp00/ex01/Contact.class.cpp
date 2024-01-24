@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 20:26:56 by mescobar          #+#    #+#             */
-/*   Updated: 2024/01/22 16:56:46 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/01/24 12:37:14 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,16 @@ void	Contact::names(std::string str)
 	}
 }
 
+void	Contact::showContact(int i)
+{
+	std::cout << "Index: " << i + 1 << std::endl
+				<< "First Name: " << _F_name << std::endl
+				<< "Name: " << _Name << std::endl
+				<< "Nickname: " << _Nick << std::endl
+				<< "NUmber: " << _Number << std::endl
+				<< "Secret: " << _Secret << std::endl;
+}
+
 void	Contact::show(int j)
 {
 	int	i;
@@ -47,7 +57,7 @@ void	Contact::show(int j)
 	i = 0;
 	while (++i < 10)
 		std::cout << " ";
-	std::cout << j << "|";
+	std::cout << j + 1 << "|";
 	names(Contact::_F_name);
 	std::cout << "|";
 	names(Contact::_Name);

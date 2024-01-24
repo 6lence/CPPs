@@ -6,11 +6,25 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 19:21:10 by mescobar          #+#    #+#             */
-/*   Updated: 2024/01/22 16:41:43 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/01/24 12:50:34 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Common.h"
+
+int	isnum(std::string str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
+		i++;
+	}
+	return (1);
+}
 
 int main(void)
 {

@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 11:20:54 by mescobar          #+#    #+#             */
-/*   Updated: 2024/01/23 15:42:12 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/01/24 13:08:14 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,22 @@ void	Account::_displayTimestamp()
 
 	std::time(&time);
 	t = localtime(&time);
-	std::cout << "[" << t->tm_year + 1900
-				<< t->tm_mon
-				<< t->tm_mday
-				<< "_" << t->tm_hour
-				<< t->tm_min
-				<< t->tm_sec << "] ";
+	std::cout << "[" << t->tm_year + 1900;
+	if (t->tm_mon < 10)
+		std::cout << '0';
+	std::cout << t->tm_mon + 1;
+	if (t->tm_mday < 10)
+		std::cout << "0";
+	std::cout << t->tm_mday << "_";
+	if (t->tm_hour < 10)
+		std::cout << '0';
+	std::cout << t->tm_hour;
+	if (t->tm_min < 10)
+		std::cout << '0';
+	std::cout<< t->tm_min;
+	if (t->tm_sec < 10)
+		std::cout << '0';
+	std::cout << t->tm_sec << "] ";
 }
 
 void	Account::displayStatus() const
@@ -85,7 +95,7 @@ bool	Account::makeWithdrawal(int withdrawal)
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex
 				<< ";p_amount:" << _amount
-				<< ";withdrawals" << withdrawal;
+				<< ";withdrawals:" << withdrawal;
 	_amount -= withdrawal;
 	_nbWithdrawals += 1;
 	_totalNbWithdrawals += _nbWithdrawals;
@@ -100,7 +110,7 @@ void	Account::makeDeposit(int deposit)
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex
 				<< ";p_amount:" << _amount
-				<< ";deposit" << deposit;
+				<< ";deposit:" << deposit;
 	_amount += deposit;
 	_nbDeposits += 1;
 	_totalNbDeposits += _nbDeposits;

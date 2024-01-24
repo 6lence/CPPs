@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 20:14:58 by mescobar          #+#    #+#             */
-/*   Updated: 2024/01/22 15:20:16 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/01/24 12:35:31 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class Contact
 		void	set(std::string str, int n);
 		void	names(std::string res);
 		void	show(int i);
+		void	showContact(int i);
 };
 
 #endif
