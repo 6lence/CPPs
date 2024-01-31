@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 16:05:37 by mescobar          #+#    #+#             */
-/*   Updated: 2024/01/31 10:08:00 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/01/31 15:35:07 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,28 @@ class Fixed
 		void	setRawBits(int const raw);
 		float 	toFloat(void) const;
 		int		toInt(void) const;
+
+		Fixed&	operator--(void);
+		Fixed&	operator++(void);
+		Fixed	operator--(int nb);
+		Fixed	operator++(int nb);
+
+		Fixed	operator+(Fixed const& pt) const;
+		Fixed	operator-(Fixed const& pt) const;
+		Fixed	operator*(Fixed const& pt) const;
+		Fixed	operator/(Fixed const& pt) const;
+
+		bool	operator<(Fixed const& pt) const;
+		bool	operator>(Fixed const& pt) const;
+		bool	operator<=(Fixed const& pt) const;
+		bool	operator>=(Fixed const& pt) const;
+		bool	operator==(Fixed const& pt) const;
+		bool	operator!=(Fixed const& pt) const;
+
+		static Fixed const&	min(Fixed const& pt1, Fixed const& pt2);
+		static Fixed&		min(Fixed& pt1, Fixed& pt2);
+		static Fixed const&	max(Fixed const& pt1, Fixed const& pt2);
+		static Fixed&		max(Fixed& pt1, Fixed& pt2);
 };
 
 std::ostream&	operator<<(std::ostream& o, Fixed const& nb);
