@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 17:10:22 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/04 12:06:01 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/04 12:36:57 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 
 int main() {
 
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+	// const Animal* j = new Dog();
+	// const Animal* i = new Cat();
 
-	delete j; //should not create a leak
-	delete i;
+	// delete j; //should not create a leak
+	// delete i;
 
 	// const Animal *tab[10];
 
@@ -37,10 +37,10 @@ int main() {
 
 	// std::cout << std::endl;
 
-	// Cat copy;
-	// Cat cat;
+	Cat copy;
+	Cat cat;
 
-	// cat.setIdeas("Meow");
+	cat.setIdeas("Meow");
 	// for (int i = 0; i < 100; i++)
 	// 	std::cout << cat.getBrain()->getIdeas(i) << std::endl;
 	// std::cout << std::endl;

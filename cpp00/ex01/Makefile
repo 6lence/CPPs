@@ -15,6 +15,9 @@ all: ${NAME}
 ${NAME}: ${OBJ}
 	${CC} ${CFLAGS} ${OBJ} -o ${NAME} -lpthread && echo "Successfully compiled !" || echo "Compiling error !"
 
+%.o: %.c
+	${CC} ${CFLAGS} -o $@ -c $< -g
+
 clean:
 	rm -f ${OBJ} && echo ".o Removed successfully." || echo "No .o to remove."
 
