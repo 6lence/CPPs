@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 18:18:03 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/01 18:42:12 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/12 13:22:55 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ ScavTrap::ScavTrap(std::string Name): ClapTrap(Name)
 	this->_atk = 20;
 }
 
-ScavTrap::ScavTrap(ScavTrap const& cp)
+ScavTrap::ScavTrap(ScavTrap const& cp): ClapTrap()
 {
 	std::cout << "Scav copy constuctor called" << std::endl;
 	*this = cp;
@@ -39,7 +39,7 @@ ScavTrap::~ScavTrap(void)
 	std::cout << "Scav destructor called" << std::endl;
 }
 
-ScavTrap&	ScavTrap::operator = (ScavTrap const& cp)
+ScavTrap&	ScavTrap::operator=(ScavTrap const& cp)
 {
 	if (this != &cp)
 		*this = cp;

@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 17:13:09 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/01 18:59:57 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/12 13:17:46 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ class ClapTrap
 {
 	protected:
 		std::string	_name;
-		int			_hp = 10;
-		int			_enr = 10;
-		int			_atk = 0;
+		int			_hp;
+		int			_enr;
+		int			_atk;
 
 	public:
-		ClapTrap();
+		ClapTrap(void);
 		ClapTrap(std::string Name);
 		ClapTrap(ClapTrap const& cp);
 		~ClapTrap();

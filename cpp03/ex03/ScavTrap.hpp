@@ -17,9 +17,6 @@
 
 class ScavTrap: virtual public ClapTrap
 {
-	private:
-		
-
 	public:
 		ScavTrap(void);
 		ScavTrap(std::string Name);

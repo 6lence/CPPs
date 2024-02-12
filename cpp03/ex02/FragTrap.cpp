@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:00:25 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/01 19:09:57 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/12 13:28:47 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ FragTrap::FragTrap(std::string Name): ClapTrap(Name)
 	this->_atk = 30;
 }
 
-FragTrap::FragTrap(FragTrap const& cp)
+FragTrap::FragTrap(FragTrap const& cp): ClapTrap()
 {
 	std::cout << "Frag copy constuctor called" << std::endl;
 	*this = cp;

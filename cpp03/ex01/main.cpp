@@ -6,10 +6,11 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 17:12:18 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/01 18:50:10 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/12 13:24:49 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
 int main(void)

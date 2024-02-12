@@ -6,33 +6,49 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 17:21:03 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/01 18:38:19 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/12 13:15:01 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void){ std::cout << "Regular constructor called" << std::endl;}
+ClapTrap::ClapTrap(void){ 
+	std::cout << "Regular constructor called" << std::endl;
+	_hp = 0;
+	_atk = 0;
+	_enr = 0;
+}
 
 ClapTrap::ClapTrap(std::string Name)
 {
-	std::cout << "Name constructor called" << std::endl;
+	std::cout << "Claptrap name constructor called" << std::endl;
 	_name = Name;
+	_hp = 0;
+	_atk = 0;
+	_enr = 0;
 }
 
 ClapTrap::ClapTrap(ClapTrap const& cp)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "Claptrap copy constructor called" << std::endl;
 	*this = cp;
+	_hp = 0;
+	_atk = 0;
+	_enr = 0;
 }
 
-ClapTrap::~ClapTrap(void){ std::cout << "Destructor called" << std::endl;}
+ClapTrap::~ClapTrap(void){ std::cout << "Claptrap Ddstructor called" << std::endl;}
 
 ClapTrap&	ClapTrap::operator=(ClapTrap const& cp)
 {
-	std::cout << "Copy assignements operator called" << std::endl;
+	std::cout << "Claptrap copy assignements operator called" << std::endl;
 	if (this != &cp)
+	{
+		this->_atk = cp.getAtk();
+		this->_enr = cp.getEnr();
+		this->_hp = cp.getHp();
 		*this = cp;
+	}
 	return (*this);
 }
 

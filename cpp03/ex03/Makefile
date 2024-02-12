@@ -1,13 +1,14 @@
 MAKEFLAGS += --silent
-NAME = DiamondIsUnbreakeable
+NAME = ClapTrap
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC =	main.cpp \
-		DiamondTrap.cpp \
 		ClapTrap.cpp \
 		ScavTrap.cpp \
-		FragTrap.cpp 
+		FragTrap.cpp \
+		DiamondTrap.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
