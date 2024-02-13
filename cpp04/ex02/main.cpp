@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 17:10:22 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/05 07:27:12 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/05 07:45:25 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,13 @@ int main() {
 	Cat copy;
 	Cat cat;
 
-	cat.setIdeas("Meow");
+	cat.setIdeas("OHHHHHHHHHHHHH DAAAAAAAMN DANIEL");
 	for (int i = 0; i < 100; i++)
 		std::cout << cat.getBrain()->getIdeas(i) << std::endl;
 	std::cout << std::endl;
 
 	copy = cat;
-	copy.setIdeas("Nyan");
+	copy.setIdeas("La vie de mamere");
 
 	for (int i = 0; i < 100; i++)
 		std::cout << cat.getBrain()->getIdeas(i) << std::endl;
