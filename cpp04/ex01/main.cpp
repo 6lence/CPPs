@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 17:10:22 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/05 07:27:12 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/13 12:30:02 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 #include "WrongCat.hpp"
 
 int main() {
-
+	Dog src;
+	{
+		Dog tmp = src;
+	}
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
 

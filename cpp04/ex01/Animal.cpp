@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 17:13:19 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/04 08:38:59 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/13 10:10:34 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Animal&	Animal::operator=(Animal const& cp)
 {
 	std::cout << "Animal copy assignments operator called" << std::endl;
 	if (this != &cp)
-		*this = cp;
+		this->_type = cp.getType();
 	return (*this);
 }
 
