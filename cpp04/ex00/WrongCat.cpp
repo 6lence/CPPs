@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 09:01:03 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/04 09:01:27 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/13 09:37:36 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ WrongCat::WrongCat(): WrongAnimal("WrongCat")
 	std::cout << "Regular WrongCat constructor called" << std::endl;
 }
 
-WrongCat::WrongCat(WrongCat const& cp)
+WrongCat::WrongCat(WrongCat const& cp): WrongAnimal()
 {
 	std::cout << "WrongCat copy constructor called" << std::endl;
 	*this = cp;

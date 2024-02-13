@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 17:10:33 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/04 08:38:52 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/13 09:35:54 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Animal
 		Animal(void);
 		Animal(std::string type);
 		Animal(Animal const& cp);
-		~Animal(void);
+		virtual ~Animal(void);
 		Animal&	operator=(Animal const& cp);
 
 		std::string	getType() const;

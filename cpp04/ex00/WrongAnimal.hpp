@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 08:42:05 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/04 08:57:30 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/13 09:38:25 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class WrongAnimal
 		WrongAnimal&	operator=(WrongAnimal const& cp);
 
 		std::string	getType() const;
-		virtual void	makeSound() const;
+		void	makeSound() const;
 };
 
 #endif

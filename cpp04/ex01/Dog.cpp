@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 17:23:14 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/04 12:03:49 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/13 09:39:12 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Dog::Dog() : Animal("Dog")
 	_brain = new Brain();
 }
 
-Dog::Dog(Dog const& cp)
+Dog::Dog(Dog const& cp): Animal()
 {
 	std::cout << "Dog copy constructor called" << std::endl;
 	*this = cp;

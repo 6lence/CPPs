@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 17:29:13 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/05 07:23:48 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/13 09:42:35 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cat::Cat(): Animal("Cat")
 	_brain = new Brain();
 }
 
-Cat::Cat(Cat const& cp)
+Cat::Cat(Cat const& cp): Animal()
 {
 	std::cout << "Cat copy constructor called" << std::endl;
 	*this = cp;

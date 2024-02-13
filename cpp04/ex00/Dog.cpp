@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 17:23:14 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/04 08:37:53 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/13 09:38:36 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Dog::Dog() : Animal("Dog")
 	std::cout << "Regular Dog constructor called" << std::endl;
 }
 
-Dog::Dog(Dog const& cp)
+Dog::Dog(Dog const& cp): Animal()
 {
 	std::cout << "Dog copy constructor called" << std::endl;
 	*this = cp;
