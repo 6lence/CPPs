@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.cpp                                           :+:      :+:    :+:   */
+/*   AForm.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mescobar <mescobar42@student.42perpigna    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 14:20:14 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/14 20:57:03 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/14 20:07:20 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
-void	Form::signForm(Bureaucrat const& cp){
+void	AForm::signAForm(Bureaucrat const& cp){
 	if (this->getSign() == true)
 		std::cout << cp.getName() << " signed " << this->getName() << std::endl;
 	else
 		std::cout << cp.getName() << " couldn't sign " << this->getName() << std::endl;
 }
 
-void	Form::beSigned(Bureaucrat const& cp){
+void	AForm::beSigned(Bureaucrat const& cp){
 	try{
 		if (cp.getGrade() > this->getGrade())
 		{
@@ -34,42 +34,42 @@ void	Form::beSigned(Bureaucrat const& cp){
 	}
 }
 
-std::ostream&	operator<<(std::ostream& o, Form const& cp){
-	o << cp.getName() << ", Form grade " << cp.getGrade() << " is " << cp.getSign();
+std::ostream&	operator<<(std::ostream& o, AForm const& cp){
+	o << cp.getName() << ", AForm grade " << cp.getGrade() << " is " << cp.getSign();
 	return (o);
 }
 
-bool	Form::getSign() const{
+bool	AForm::getSign() const{
 	return (_signed);
 }
 
-int			Form::getGrade() const{
+int			AForm::getGrade() const{
 	return (_grade);
 }
 
-std::string	Form::getName() const{
+std::string	AForm::getName() const{
 	return (_name);
 }
 
-Form::Form(): _grade(150){
-	std::cout << "Form default constructor called" << std::endl;
+AForm::AForm(): _grade(150){
+	std::cout << "AForm default constructor called" << std::endl;
 }
 
-Form::Form(std::string name, bool sign, int grade): _name(name), _grade(grade){
-	std::cout << "Form assign values constructor called" << std::endl;
+AForm::AForm(std::string name, bool sign, int grade): _name(name), _grade(grade){
+	std::cout << "AForm assign values constructor called" << std::endl;
 	_signed = sign;
 }
 
-Form::Form(Form const& cp): _grade(cp.getGrade()){
+AForm::AForm(AForm const& cp): _grade(cp.getGrade()){
 	*this = cp;
 }
 
-Form&	Form::operator=(Form const& cp){
+AForm&	AForm::operator=(AForm const& cp){
 	if (this != &cp)
 		this->_signed = cp.getSign();
 	return (*this);
 }
 
-Form::~Form(){
-	std::cout << "Form default destructor called" << std::endl;
+AForm::~AForm(){
+	std::cout << "AForm default destructor called" << std::endl;
 }

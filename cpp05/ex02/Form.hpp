@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar42@student.42perpigna    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 13:37:34 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/14 20:56:36 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/14 20:52:14 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class Form
 		void	beSigned(Bureaucrat const& cp);
 		void	signForm(Bureaucrat const& cp);
 		
-		class GradeTooLowException{
+		class signTooLow{
 			public:
 				void printError(){
 					std::cout << "Signer grade is too low !" << std::endl;

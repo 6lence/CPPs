@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mescobar <mescobar42@student.42perpigna    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 11:52:29 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/14 13:46:29 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/14 20:57:03 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class Bureaucrat
 		class GradeTooLow: public std::exception
 		{
 			public:
-				void	GradeTooLowhException(){
+				void	GradeTooLowException(){
 					std::cout << "Grade too low !" << std::endl;
 				};
 		};

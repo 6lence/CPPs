@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mescobar <mescobar42@student.42perpigna    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 12:45:43 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/14 14:15:27 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/14 20:57:03 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int main(){
 		a.GradeTooHighException();
 	}
 	catch(Bureaucrat::GradeTooLow&	a){
-		a.GradeTooLowhException();
+		a.GradeTooLowException();
 	}
 	std::cout << std::endl;
 
@@ -48,7 +48,7 @@ int main(){
 		a.GradeTooHighException();
 	}
 	catch(Bureaucrat::GradeTooLow&	a){
-		a.GradeTooLowhException();
+		a.GradeTooLowException();
 	}
 	std::cout << std::endl;
 
@@ -64,7 +64,7 @@ int main(){
 		a.GradeTooHighException();
 	}
 	catch(Bureaucrat::GradeTooLow&	a){
-		a.GradeTooLowhException();
+		a.GradeTooLowException();
 	}
 
 	
