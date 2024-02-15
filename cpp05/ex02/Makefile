@@ -6,7 +6,10 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 SRC =	main.cpp \
 		Bureaucrat.cpp \
-		AForm.cpp
+		AForm.cpp \
+		ShrubberyCreationForm.cpp \
+		RobotomyRequestForm.cpp \
+		PresidentialPardonForm.cpp
 
 OBJ = ${SRC:.cpp=.o}
 

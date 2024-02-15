@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mescobar <mescobar42@student.42perpigna    +#+  +:+       +#+        */
+/*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 12:45:43 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/14 20:07:14 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/15 12:25:47 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,27 @@
 int main(){
 
 	Bureaucrat	one("one", 1);
-	Bureaucrat	two("two", 80);
-	AForm		test1("test1", false, 74);
-	AForm		test2("test2", false, 76);
+	Bureaucrat	two("two", 75);
+	Bureaucrat	three("three", 150);
+
+	PresidentialPardonForm	zach("Quentin");
+	RobotomyRequestForm		ro("Quentin");
+	ShrubberyCreationForm	sch("Quentin");
 
 	std::cout << std::endl;
-	test1.beSigned(one);
-	test1.signAForm(one);
-	test2.beSigned(two);
-	test2.signAForm(two);
 
-	std::cout << std::endl << test1;
-	std::cout << std::endl << test2 << std::endl;
+	sch.execute(one);
+	sch.execute(two);
+	sch.execute(three);
+
+	ro.execute(one);
+	ro.execute(two);
+	ro.execute(three);
+
+	zach.execute(one);
+	zach.execute(two);
+	zach.execute(three);
+
 	std::cout << std::endl;
 
 	return (0);

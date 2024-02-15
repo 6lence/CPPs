@@ -15,6 +15,8 @@
 
 # include "Bureaucrat.hpp"
 
+class Bureaucrat;
+
 class AForm
 {
 	private:
@@ -29,9 +31,10 @@ class AForm
 		~AForm();
 		AForm&	operator=(AForm const& cp);
 
-		bool		getSign() const;
-		std::string	getName() const;
-		int			getGrade() const;
+		bool			getSign() const;
+		std::string		getName() const;
+		int				getGrade() const;
+		virtual void	execute(Bureaucrat const& cp) const = 0;
 
 		void	beSigned(Bureaucrat const& cp);
 		void	signAForm(Bureaucrat const& cp);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Common.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mescobar <mescobar42@student.42perpigna    +#+  +:+       +#+        */
+/*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 20:23:20 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/14 20:42:34 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/15 12:15:06 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,7 @@
 # include "Bureaucrat.hpp"
 # include "AForm.hpp"
 # include "ShrubberyCreationForm.hpp"
+# include "PresidentialPardonForm.hpp"
+# include "RobotomyRequestForm.hpp"
 
 #endif

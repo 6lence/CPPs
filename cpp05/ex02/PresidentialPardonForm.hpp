@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/14 20:10:57 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/15 15:57:47 by mescobar         ###   ########.fr       */
+/*   Created: 2024/02/15 11:47:13 by mescobar          #+#    #+#             */
+/*   Updated: 2024/02/15 15:57:58 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_HPP
-# define SHRUBBERYCREATIONFORM_HPP
+#ifndef PRESIDENTIALPARDONFORM_HPP
+# define PRESIDENTIALPARDONFORM_HPP
 
 # include "Common.h"
 
 class Bureaucrat;
 
-class ShrubberyCreationForm: public AForm
+class PresidentialPardonForm: public AForm
 {
 	private:
 		std::string _target;
-
+	
 	public:
-		ShrubberyCreationForm();
-		ShrubberyCreationForm(std::string target);
-		ShrubberyCreationForm(ShrubberyCreationForm const& cp);
-		~ShrubberyCreationForm();
-		ShrubberyCreationForm&	operator=(ShrubberyCreationForm const& cp);
+		PresidentialPardonForm();
+		PresidentialPardonForm(std::string target);
+		~PresidentialPardonForm();
+		PresidentialPardonForm&	operator=(PresidentialPardonForm const& cp);
 
-		std::string		getTarget() const;
-		void			execute(Bureaucrat const& cp) const;
+		std::string	getTarget() const;
+		void		execute(Bureaucrat const& cp) const;
 };
 
 #endif

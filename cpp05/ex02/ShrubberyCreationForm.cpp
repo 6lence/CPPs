@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mescobar <mescobar42@student.42perpigna    +#+  +:+       +#+        */
+/*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 20:14:48 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/14 20:59:39 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/15 11:55:46 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,16 @@ ShrubberyCreationForm::ShrubberyCreationForm(): AForm("Shrubbery Creation", 145,
 	std::cout << "Shru default constructor called" << std::endl;
 }
 
-void	ShrubberyCreationForm::exec(Bureaucrat const* cp){
+ShrubberyCreationForm::ShrubberyCreationForm(std::string cp): AForm("Shrubbery Creation", 145, 137){
+	std::cout << "Shru assign target constructor called" << std::endl;
+	_target = cp;
+}
+
+void	ShrubberyCreationForm::execute(Bureaucrat const& cp) const{
 
 	std::fstream	fd;
 
-	if (cp->getGrade() > this->getGrade())
+	if (cp.getGrade() > this->getGrade())
 		throw  signTooLow();
 	if (this->getSign() == false)
 		throw NotSigned();
@@ -75,8 +80,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm(){
 
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(ShrubberyCreationForm const& cp){
 	std::cout << "Shru copy assignments operator called" << std::endl;
-	if (this != &cp){
+	if (this != &cp)
 		this->_target = cp.getTarget();
-	}
 	return (*this);
 }
