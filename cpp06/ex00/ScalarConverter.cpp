@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 10:27:18 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/18 10:24:40 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/19 08:12:27 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ScalarConverter::printInt(std::string nb){
 			return ;
 		}
 	}
-	std::cout << std::atoi(nb.c_str()) << std::endl;
+	std::cout << atoi(nb.c_str()) << std::endl;
 }
 
 void	ScalarConverter::printFloat(std::string nb){
@@ -46,7 +46,8 @@ void	ScalarConverter::printFloat(std::string nb){
 		std::cout << "Non displayable" << std::endl;
 		return;
 	}
-	for(int i = 0; i < nb.length() - 1; i++){
+	int len =  nb.length();
+	for(int i = 0; i < len - 1; i++){
 		if ((nb[i] < '0' || nb[i] > '9') && nb[i] != '.' && nb[i] != '+' && nb[i] != '-')
 		{
 			std::cout << "Non displayable" << std::endl;
@@ -55,16 +56,17 @@ void	ScalarConverter::printFloat(std::string nb){
 		if (nb[i] == '.')
 			point = 1;
 	}
-	std::cout << std::atoi(nb.c_str());
+	std::cout << atoi(nb.c_str());
 	if (point)
 	{
+		int i = 0;
 		char const	*tmp = nb.c_str();
-		while (*tmp != '.')
-			*tmp++;
-		while (*tmp && *tmp != 'f')
+		while (tmp[i] != '.')
+			i++;
+		while (tmp[i] && tmp[i] != 'f')
 		{
-			std::cout << *tmp;
-			*tmp++;
+			std::cout << tmp[i];
+			i++;
 		}
 		std::cout << 'f' << std::endl;
 	}
@@ -79,7 +81,8 @@ void	ScalarConverter::printDouble(std::string nb){
 		std::cout << "Non displayable" << std::endl;
 		return;
 	}
-	for(int i = 0; i < nb.length() - 1; i++){
+	int len = nb.length();
+	for(int i = 0; i < len - 1; i++){
 		if ((nb[i] < '0' || nb[i] > '9') && nb[i] != '.' && nb[i] != '+' && nb[i] != '-')
 		{
 			std::cout << "Non displayable" << std::endl;
@@ -88,16 +91,17 @@ void	ScalarConverter::printDouble(std::string nb){
 		if (nb[i] == '.')
 			point = 1;
 	}
-	std::cout << std::atoi(nb.c_str());
+	std::cout << atoi(nb.c_str());
 	if (point)
 	{
+		int i = 0;
 		char const	*tmp = nb.c_str();
-		while (*tmp != '.')
-			*tmp++;
-		while (*tmp && *tmp != 'f')
+		while (tmp[i] != '.')
+			i++;
+		while (tmp[i] && tmp[i] != 'f')
 		{
-			std::cout << *tmp;
-			*tmp++;
+			std::cout << tmp[i];
+			i++;
 		}
 		std::cout << std::endl;
 	}

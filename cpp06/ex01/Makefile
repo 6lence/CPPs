@@ -1,6 +1,7 @@
 MAKEFLAGS += --silent
 NAME = Serializer
 CC = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC =	main.cpp \
