@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mescobar <mescobar42@student.42perpigna    +#+  +:+       +#+        */
+/*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 21:15:07 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/18 22:11:13 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/19 12:42:17 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,15 @@ template <typename T> class Array{
 	public:
 		Array(): _nb(0), _array(new T[_nb]){};
 		Array(unsigned int nb): _nb(nb), _array(new T[_nb]){};
-		Array(Array const& cp) { *this = cp; };
+		Array(Array const& cp): _array(NULL) { *this = cp; };
 		~Array() { delete[] this->_array; };
 		Array&	operator=(Array const& cp){
 			if (this != &cp)
 			{
-				delete[] this->_array;
+				if (this->_array)
+					delete[] this->_array;
 				this->_array = new T[cp._nb];
-				for (int i = 0; i < cp._nb; i++)
+				for (unsigned int i = 0; i < cp._nb; i++)
 					this->_array[i] = cp._array[i];
 				this->_nb = cp._nb;	
 			}
@@ -37,15 +38,13 @@ template <typename T> class Array{
 		T&	operator[](unsigned int nb){
 			if (nb < this->_nb)
 				return (this->_array[nb]);
-			throw(OutOfBound());
+			throw(OutOfBounds());
 		}
 
 		unsigned int	size() { return this->_nb; };
 
-		class OutOfBound: std::exception{
+		class OutOfBounds: public std::exception{
 			public:
-				void printError() {
-					std::cout << "Out of bounds" << std::endl;
-			}
-		};
+				virtual const char* what() const throw() { return "Out of bounds"; }
+			};
 };

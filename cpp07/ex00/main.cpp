@@ -3,16 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mescobar <mescobar42@student.42perpigna    +#+  +:+       +#+        */
+/*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 20:53:31 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/18 21:06:32 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/19 08:26:40 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iostream"
 
 template <typename T> void swap(T one, T two){
+	T tmp;
+	tmp = one;
+	one = two;
+	two = tmp;
 }
 
 template <typename T> T max(T one, T two){

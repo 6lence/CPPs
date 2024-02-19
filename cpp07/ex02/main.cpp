@@ -3,37 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mescobar <mescobar42@student.42perpigna    +#+  +:+       +#+        */
+/*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 21:55:06 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/18 22:05:35 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/02/19 12:41:44 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iostream"
 #include "Array.hpp"
+#include "cstdlib"
 #define MAX_VAL 750
 
 int main(){
-	// Array<std::string> test(4);
-    // Array<std::string> test1(0);
+	Array<std::string> test(4);
+    Array<std::string> test1(0);
 
-    // std::cout << "  ~TEST~  " << std::endl;
-    // test[0] = "Ceci";
-    // test[1] = "est";
-    // test[2] = "un";
-    // test[3] = "test.";
+    std::cout << "  ~TEST~  " << std::endl;
+    test[0] = "Ceci";
+    test[1] = "est";
+    test[2] = "un";
+    test[3] = "test.";
 
-    // for(unsigned int i = 0; i < 4; i++)
-    //     std::cout << test[i] << std::endl;
+    for(unsigned int i = 0; i < 4; i++)
+        std::cout << test[i] << std::endl;
 
-    // try {
-    //     test[4] = "Out";
-    // } catch (std::exception& e) {
-    //     std::cout << e.what() << std::endl;
-    // }
+    try {
+        test[4] = "Out";
+    } catch (std::exception& cp) {
+        std::cout << cp.what() << std::endl;
+    }
 
-	// return (0);
+	return (0);
 
     Array<int> numbers(MAX_VAL);
     int* mirror = new int[MAX_VAL];
