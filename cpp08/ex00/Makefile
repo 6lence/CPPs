@@ -1,14 +1,10 @@
 MAKEFLAGS += --silent
-NAME = BraiiiiiiinnnzzzZ
+NAME = EasyFind
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-
-SRC =	main.cpp \
-		newZombie.cpp \
-		Zombie.cpp \
-		randomChump.cpp \
-		zombieHorde.cpp
+SRC =	main.cpp 
 
 OBJ = ${SRC:.cpp=.o}
 
@@ -16,7 +12,7 @@ all: ${NAME}
 	echo "Make done successfully !"
 
 ${NAME}: ${OBJ}
-	${CC} ${CFLAGS} ${OBJ} -o ${NAME} -lpthread && echo "Successfully compiled !" || echo "Compiling error !"
+	${CC} ${CFLAGS} ${OBJ} -o ${NAME} && echo "Successfully compiled !" || echo "Compiling error !"
 
 clean:
 	rm -f ${OBJ} && echo ".o Removed successfully." || echo "No .o to remove."
