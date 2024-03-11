@@ -6,7 +6,7 @@
 /*   By: mescobar <mescobar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 19:44:16 by mescobar          #+#    #+#             */
-/*   Updated: 2024/02/20 20:48:24 by mescobar         ###   ########.fr       */
+/*   Updated: 2024/03/11 10:47:06 by mescobar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int main()
 {
-
 	std::cout << "----------------Test 1----------------" << std::endl << std::endl;
     MutantStack<int> mstack;
     mstack.push(5);
