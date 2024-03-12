@@ -69,9 +69,8 @@ void	BitcoinExchange::setDataBase(){
 	}
 	getline(file, line);
 	while (getline(file, line)){
-		std::cout << line << std::endl;
 		if (!line[10] || line[10] != ','){
-			std::cout << "File corrupted." << std::endl;
+			std::cerr << "File corrupted." << std::endl;
 			file.close();
 			exit(EXIT_FAILURE);
 		}
@@ -97,9 +96,10 @@ static	std::string	prevDate(std::string date){
 				return ("Error");
 		}
 	}
-	std::ostringstream s;
-	s << year << "-" << (month < 10 ? "0" : "") << month << "-" << (day < 10 ? "0" : "") << day;
-	return (s.str());
+	std::ostringstream ss;
+	ss << year << "-" << (month < 10 ? "0" : "") << month << "-" << (day < 10 ? "0" : "") << day;
+	date = ss.str();
+	return (date);
 }
 
 float	BitcoinExchange::getAmount(std::string date){
@@ -133,8 +133,10 @@ void	BitcoinExchange::exchange(){
 		if (!verif_value(value))
 			continue;
 		amount = getAmount(line.substr(0, 10));
-		if (amount == -1)
-			std::cout << "Error: bad input => " << line << std::endl;
+		if (amount == -1){
+			std::cerr << "Error: bad input => " << line << std::endl;
+			continue;
+		}
 		std::cout << line.substr(0, 10) << " =>" << &line[12] << " = " << value * amount << std::endl;
 	}
 }
