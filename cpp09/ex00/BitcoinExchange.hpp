@@ -22,14 +22,18 @@
 class BitcoinExchange{
 	private:
 		std::map<std::string, float>	_dataBase;
+		char*							_file;
 
 	public:
 		BitcoinExchange();
+		BitcoinExchange(char* file);
 		BitcoinExchange(BitcoinExchange const& cp);
 		~BitcoinExchange();
 		BitcoinExchange&	operator=(BitcoinExchange const& cp);
 
-		void	setDataBase();
-		std::map<std::string, float>	getDataBase() const;
 		typedef typename	std::map<std::string, float>::iterator	iterator;
+		void							setDataBase();
+		std::map<std::string, float>	getDataBase() const;
+		void							exchange();
+		float							getAmount(std::string date);
 };
