@@ -1,11 +1,11 @@
 MAKEFLAGS += --silent
-NAME = btc
+NAME = BitcoinExchange
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 SRC =	main.cpp \
-		BitcoinExchange.cpp
+		BitcoinExchange.cpp 
 
 OBJ = ${SRC:.cpp=.o}
 
